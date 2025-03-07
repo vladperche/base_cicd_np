@@ -19,4 +19,7 @@ jobs:
 
     steps:
       - name: 'Export Variables'
-        run: echo 'Exporting shared variables for environment NP'
+        run: |
+          echo 'Exporting shared variables for environment ${{ vars.AWS_ENVIRONMENT }}'
+          echo 'Node version: ${{ vars.NODE_VERSION }}'
+
