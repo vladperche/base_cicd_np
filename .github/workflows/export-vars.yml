@@ -5,13 +5,13 @@ on:
     outputs:
       AWS_ACCOUNT_ID:
         description: 'AWS Account ID#'
-        value: $${{ vars.AWS_ACCOUNT_ID }}
+        value: ${{ vars.AWS_ACCOUNT_ID }}
       AWS_ENVIRONMENT:
         description: 'AWS Environment Name'
-        value: $${{ vars.AWS_ENVIRONMENT }}
+        value: ${{ vars.AWS_ENVIRONMENT }}
       NODE_VERSION:
         description: 'Node.JS Version'
-        value: $${{ vars.NODE_VERSION }}
+        value: ${{ vars.NODE_VERSION }}
 
 jobs:
   export-vars:
@@ -20,6 +20,7 @@ jobs:
     steps:
       - name: 'Export Variables'
         run: |
-          echo 'Exporting shared variables for environment $${{ vars.AWS_ENVIRONMENT }}'
-          echo 'Node version: $${{ vars.NODE_VERSION }}'
+          echo 'Exporting shared variables for environment ${{ vars.AWS_ENVIRONMENT }}'
+          echo 'Node version: ${{ vars.NODE_VERSION }}'
+          echo 'GitHub JobID: ${{ vars.GITHUB_JOB }}'
 
