@@ -12,3 +12,11 @@ on:
       NODE_VERSION:
         description: 'Node.JS Version'
         value: ${{ vars.NODE_VERSION }}
+
+jobs:
+  export-vars:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 'Export Variables'
+        run: echo 'Exporting shared variables for environment NP'
