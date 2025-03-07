@@ -1,0 +1,14 @@
+name: 'Export Variables'
+
+on:
+  workflow_call:
+    outputs:
+      AWS_ACCOUNT_ID:
+        description: 'AWS Account ID#'
+        value: ${{ vars.AWS_ACCOUNT_ID }}
+      AWS_ENVIRONMENT:
+        description: 'AWS Environment Name'
+        value: ${{ vars.AWS_ENVIRONMENT }}
+      NODE_VERSION:
+        description: 'Node.JS Version'
+        value: ${{ vars.NODE_VERSION }}
