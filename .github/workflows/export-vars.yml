@@ -22,5 +22,6 @@ jobs:
         run: |
           echo 'Exporting shared variables for environment ${{ vars.AWS_ENVIRONMENT }}'
           echo 'Node version: ${{ vars.NODE_VERSION }}'
-          echo 'GitHub JobID: ${{ vars.GITHUB_JOB }}'
+          echo 'GitHub JobID: $GITHUB_JOB'
+          echo 'Test de Secret: ${{ secrets.TEST_SECRET }}'
 
