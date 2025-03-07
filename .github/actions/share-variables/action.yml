@@ -7,6 +7,6 @@ runs:
     - name: 'Define shared variables'
       shell: bash
       run: |
-        echo "AWS_ACCOUNT_ID=${{ vars.AWS_AWS_ACCOUNT_ID }}" >> $GITHUB_ENV
+        echo "AWS_ACCOUNT_ID=${{ vars.AWS_ACCOUNT_ID }}" >> $GITHUB_ENV
         echo "AWS_ENVIRONMENT=${{ vars.AWS_ENVIRONMENT }}" >> $GITHUB_ENV
         echo "NODE_VERSION=${{ vars.NODE_VERSION }}" >> $GITHUB_ENV
