@@ -1,0 +1,12 @@
+name: 'Read and share variables'
+description: 'Read and share global variables for NP Environment'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Define shared variables'
+      shell: bash
+      run: |
+        echo "AWS_ACCOUNT_ID=${{ vars.AWS_AWS_ACCOUNT_ID }}" >> $GITHUB_ENV
+        echo "AWS_ENVIRONMENT=${{ vars.AWS_ENVIRONMENT }}" >> $GITHUB_ENV
+        echo "NODE_VERSION=${{ vars.NODE_VERSION }}" >> $GITHUB_ENV
